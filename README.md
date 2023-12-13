@@ -19,4 +19,21 @@
   5 == 5.0 == 5 + 0j  --> True 
   5 is 5.0 is 5+ 0j --> False  (beacuse of type difference)
   
-  
+- ### y=(x for x in range(20000000000) if x % 2==0):  
+  y=(x for x in range(20000000000) if x % 2==0)  
+  print(list(y))
+  now generator runs to print all it's value
+- ### nested list with 2 approach
+  print(['']*3)  
+--> ['', '', '']  
+row=['']*3  
+board=[row]*3  
+print(board)  
+--> [['', '', ''], ['', '', ''], ['', '', '']]  
+board[0][0]=1  
+print(board)  
+--> [[1, '', ''], [1, '', ''], [1, '', '']]
+  >> so all first elemnts change synchrounsly because they point to the same object
+  #### next aproach to not point to same object  
+  board = [['']*3 for _ in range(3)]
+  >> Now you can just change board[0][0] and just it!
