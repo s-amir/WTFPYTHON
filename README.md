@@ -36,4 +36,22 @@ print(board)
   >> so all first elemnts change synchrounsly because they point to the same object
   #### next aproach to not point to same object  
   board = [['']*3 for _ in range(3)]
-  >> Now you can just change board[0][0] and just it!
+  >> Now you can just change board[0][0] and just it!  
+## Python OOP  
+#### validation : assert   
+# using assert to check for 0  
+print("The value of a / b is : ")  
+assert b != 0  
+print(a / b)  
+
+#### can also use in def __init__(): to check validation of object 
+for example check the value is bigger than zero like: assert quantity > 0  
+
+##### encapsulation : control the access of class def or attribute , can not access from other part (privatized)  
+##### abstraction :  hide information from user   
+      like:  
+      def run_query(self):  
+          --connect()  
+          --execute_query()  
+      (abstract implementation of connect and execute_query because there are private def)  
+
